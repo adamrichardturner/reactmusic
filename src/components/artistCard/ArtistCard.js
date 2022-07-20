@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function ArtistCard() {
+export default function ArtistCard({ key, title, image  }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia

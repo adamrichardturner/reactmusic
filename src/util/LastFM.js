@@ -1,4 +1,4 @@
-const apiKey = '5b7f2ede70d986f7cf6f824eb32ef1da';
+const apiKey = '5c8b135689d792b62c60afc5de010b26';
 const rootURL = 'http://ws.audioscrobbler.com/2.0/';
 
 const LastFM = {

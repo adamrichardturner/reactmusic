@@ -1,17 +1,19 @@
 import ArtistCard from "../artistCard/ArtistCard"
+import musicBrainz from "../../util/MusicBrainz";
 
 const TopArtists = ({ topArtists }) => {
-    Object.keys(topArtists).map((artist) => {
-        return(
-            <div className="artist-cards">
-                <ArtistCard 
-                    key={artist.name}
-                    title={artist.name}
-                    image={artist.image}
-                />
-            </div>
-        ) 
-    })
+    console.log(Object.values(topArtists))
+    return (
+        <div className="artist-card">
+            {Object.values(topArtists)[0].map((val, index) => {
+                return <ArtistCard 
+                            key={index}
+                            name={val.name}
+                            image={musicBrainz(val.mbid)}
+                            />
+            })}
+        </div>
+    )
 }
 
 export default TopArtists;
